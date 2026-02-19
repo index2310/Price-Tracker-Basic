@@ -22,6 +22,6 @@ Build using TracFork
 ![Running](Proof/2026-02-19-202030.png)
 
 ### 🖥 Application Running
-![Running](proof/2026-02-19-202040.png)
+![Running](Proof/2026-02-19-202040.png)
 
 Build with Love
