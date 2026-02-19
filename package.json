@@ -7,6 +7,20 @@
   },
   "dependencies": {
     "axios": "^1.13.5",
-    "express": "^4.22.1"
-  }
+    "ejs": "^4.0.1",
+    "express": "^4.22.1",
+    "moment": "^2.30.1"
+  },
+  "description": "```\r trac18yfhy8yvzyw8ljatsfk0gkmf4wzrmq78v749usv323vvxsrhycyqn34fuj\r ```\r # Coin Price Track\r ```\r Simple beta app for local running to check current Crypto Prices using ticker and API Provided by CoinGecko\r Build using TracFork\r ```",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/index2310/Price-Tracker-Basic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/index2310/Price-Tracker-Basic/issues"
+  },
+  "homepage": "https://github.com/index2310/Price-Tracker-Basic#readme"
 }

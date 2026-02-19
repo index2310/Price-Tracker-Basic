@@ -8,8 +8,29 @@ Simple beta app for local running to check current Crypto Prices using ticker an
 Build using TracFork
 ```
 
+# Coin Price Track
+```Bash
+## ⚙️ Installation
+
+### 1️⃣ Clone Repository
+
+   - git clone https://github.com/index2310/Price-Tracker-Basic
+   - cd Price-Tracker-Basic
+
+### 2️⃣ Install Dependencies
+
+   - npm install
+
+### 3️⃣ Run App
+
+   - node app.js
+
+### 4️⃣ Open Apps on Local Browser
+
+   - http://localhost:3001/
 
 ---
+
 # Features
 
 
@@ -25,9 +46,9 @@ Build using TracFork
 ## 📸 Proof of Work
 
 ### 🖥 Application Running
-![Running](Proof/2026-02-19-202030.png)
+![Running](Proof/1.png)
 
 ### 🖥 Application Running
-![Running](Proof/2026-02-19-202040.png)
+![Running](Proof/2.png)
 
-Build with Love
+Build in Trac Intercom with Love

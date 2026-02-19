@@ -9,19 +9,54 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Coin Price Tracker</h1>
-    <form id="coinForm">
-      <label for="ticker">Masukkan Ticker Koin (misal: bitcoin):</label>
-      <input type="text" id="ticker" name="ticker" required>
-      <button type="submit">Cari Harga</button>
+ <div class="container">
+
+  <div class="left-panel">
+    <div class="header">
+      <h1 class="main-title">
+        Coin <span>Tracker</span>
+      </h1>
+      <p class="subtitle">Real-time cryptocurrency market data</p>
+    </div>
+
+    <form id="coinForm" class="search-box">
+      <input type="text" id="ticker" placeholder="btc, eth..." required>
+      <button type="submit">Search</button>
     </form>
 
-    <div id="result">
-      <!-- Harga akan ditampilkan di sini -->
+    <div id="result"></div>
+  </div>
+
+  <div class="right-panel">
+    <h2>Coin Details</h2>
+    <div id="coinDetails">
+      <p>No coin selected</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- 🔥 PINDAH KE SINI -->
+  <div id="chartContainer" class="chart-section">
+    <hr>
+    <select id="daysSelect">
+      <option value="1">1 Day</option>
+      <option value="7" selected>7 Days</option>
+      <option value="30">30 Days</option>
+      <option value="90">90 Days</option>
+    </select>
+
+    <canvas id="priceChart"></canvas>
+  </div>
+
+  <div class="footer">
+    © 2026 Index2310 • 
+    <a href="https://github.com/index2310/Price-Tracker-Basic" target="_blank">
+      GitHub Repository
+    </a>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>

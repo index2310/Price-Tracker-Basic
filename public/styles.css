@@ -1,74 +1,184 @@
-/* styles.css */
+/* ===== GLOBAL ===== */
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #1f1f1f; /* Latar belakang gelap */
-  color: white; /* Warna teks putih */
+  background-color: #1f1f1f;
+  color: white;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+/* ===== CONTAINER GRID ===== */
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #333; /* Warna latar belakang container */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 2px solid #00bfff; /* Garis biru terang */
+  flex: 1;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #333;
+  border-radius: 10px;
+  border: 2px solid #00bfff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
 }
 
-h1 {
-  text-align: center;
-  color: #00bfff; /* Judul berwarna biru terang */
-  margin-bottom: 30px;
+/* ===== HEADER ===== */
+
+.header {
+  margin-bottom: 25px;
+  max-width: 350px;
 }
+
+.main-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.main-title span {
+  color: #00bfff;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+
+/* ===== LEFT PANEL ===== */
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== RIGHT PANEL ===== */
+
+.right-panel {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #00bfff;
+  height: fit-content;
+}
+
+.right-panel h2 {
+  margin-top: 0;
+  color: #00bfff;
+}
+
+/* ===== SEARCH ===== */
 
 form {
   margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  max-width: 350px;
 }
 
 input {
-  padding: 10px;
-  font-size: 16px;
-  width: 80%;
-  margin-right: 10px;
-  background-color: #444; /* Warna latar belakang input */
-  border: 1px solid #00bfff; /* Garis input berwarna biru terang */
+  padding: 8px;
+  font-size: 14px;
+  flex: 1;
+  background-color: #444;
+  border: 1px solid #00bfff;
   border-radius: 4px;
   color: white;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 14px;
+  font-size: 14px;
   cursor: pointer;
-  background-color: #00bfff; /* Tombol berwarna biru terang */
+  background-color: #00bfff;
   color: white;
   border: none;
   border-radius: 4px;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #009acd; /* Tombol hover berwarna biru lebih gelap */
+  background-color: #009acd;
 }
+
+/* ===== RESULT ===== */
 
 #result {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 15px;
+  font-size: 20px;
   font-weight: bold;
-  color: #00bfff; /* Hasil pencarian berwarna biru terang */
+  color: #00bfff;
 }
 
-#chart-container {
-  margin-top: 40px;
-  background-color: #222; /* Latar belakang chart */
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid #00bfff; /* Garis biru terang di sekitar chart */
+/* ===== CHART SECTION (FULL WIDTH) ===== */
+
+.chart-section {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 191, 255, 0.3);
 }
 
-canvas {
-  background-color: #222; /* Latar belakang grafik candlestick */
+.chart-section canvas {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #222;
   border-radius: 8px;
+}
+
+/* ===== DETAIL ITEMS ===== */
+
+.detail-item {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.detail-item strong {
+  color: #00bfff;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 191, 255, 0.3);
+  font-size: 14px;
+  color: #00bfff;
+}
+
+.footer a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.footer a:hover {
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.8);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-section {
+    margin-top: 10px;
+  }
 }
